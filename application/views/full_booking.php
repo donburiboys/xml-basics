@@ -59,3 +59,11 @@
     <dd>{type}</dd>
     {/daysofweek}
 </div>
+
+<div>
+    <h2>Search</h2>
+    <form method="post" action="Welcome/search">
+        {dsearch} {tssearch}
+        <button type="submit">search</button>
+    </form>
+</div>
