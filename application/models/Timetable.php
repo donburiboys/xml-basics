@@ -99,53 +99,40 @@ class Timetable extends CI_Model {
             '2:30-3:20' => '2:30-3:20',
             '3:30-5:20' => '3:30-5:20'
         );
-
         return $timetable;
     }
 
-    public function searchByDayOfTheWeek($day, $slot)
+    public function searchByDayOfTheWeek($d, $s)
     {
-        $result = array();
-
         foreach($this->daysofweek as $booking)
         {
-            if($booking->day == $day && $booking->time == $slot)
+            if($booking->day == $d && $booking->time == $s)
             {
-                array_push($result, $booking);
+                return $booking;
             }
         }
-
-        return $result;
     }
 
     public function searchByCourse($day, $slot)
     {
-        $result = array();
-
         foreach($this->code as $booking)
         {
             if($booking->day == $day && $booking->time == $slot)
             {
-                array_push($result, $booking);
+                return $booking;
             }
         }
-
-        return $result;
     }
 
     public function searchByInstructor($day, $slot)
     {
-        $result = array();
-
         foreach($this->classinstructor as $booking)
         {
             if($booking->day == $day && $booking->time == $slot)
             {
-                array_push($result, $booking);
+                return $booking;
             }
         }
-
-        return $result;
     }
 }
 
