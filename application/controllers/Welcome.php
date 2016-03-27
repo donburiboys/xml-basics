@@ -32,6 +32,16 @@ class Welcome extends Application {
         $this->render();
                 
 	}
-        
+
+    public function search()
+    {
+        $day = $this->input->post('day');
+        $time = $this->input->post('time');
+        $searchDay = $this->timetable->searchByDayOfTheWeek($day, $time);
+        $searchCourse = $this->timetable->searchByCourse($day, $time);
+        $searchInstructor = $this->timetable->searchByInstructor($day, $time);
+
+
+    }
        
 }

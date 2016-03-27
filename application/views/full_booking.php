@@ -2,8 +2,8 @@
 <div class='row'>
     <h3>Blocks</h3>
     {blocks}
-<!--    <dt>Time</dt>-->
-<!--    <dd>{time}</dd>-->
+    <dt>Time</dt>
+    <dd>{time}</dd>
     <dt>Day</dt>
     <dd>{dayofclass}</dd>
     <dt>Name</dt>
@@ -30,8 +30,8 @@
     <dd>{name}</dd>
     <dt>Class</dt>
     <dd>{code}</dd>
-<!--    <dt>Instructor</dt>-->
-<!--    <dd>{classinstructor}</dd>-->
+    <dt>Instructor</dt>
+    <dd>{classinstructor}</dd>
     <dt>Location</dt>
     <dd>{location}</dd>
     <dt>Type</dt>
@@ -45,8 +45,8 @@
     {daysofweek}
     <dt>Time</dt>
     <dd>{time}</dd>
-<!--    <dt>Day</dt>-->
-<!--    <dd>{dayofclass}</dd>-->
+    <dt>Day</dt>
+    <dd>{dayofclass}</dd>
     <dt>Name</dt>
     <dd>{name}</dd>
     <dt>Class</dt>

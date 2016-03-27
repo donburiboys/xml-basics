@@ -103,7 +103,50 @@ class Timetable extends CI_Model {
         return $timetable;
     }
 
-    
+    public function searchByDayOfTheWeek($day, $slot)
+    {
+        $result = array();
+
+        foreach($this->daysofweek as $booking)
+        {
+            if($booking->day == $day && $booking->time == $slot)
+            {
+                array_push($result, $booking);
+            }
+        }
+
+        return $result;
+    }
+
+    public function searchByCourse($day, $slot)
+    {
+        $result = array();
+
+        foreach($this->code as $booking)
+        {
+            if($booking->day == $day && $booking->time == $slot)
+            {
+                array_push($result, $booking);
+            }
+        }
+
+        return $result;
+    }
+
+    public function searchByInstructor($day, $slot)
+    {
+        $result = array();
+
+        foreach($this->classinstructor as $booking)
+        {
+            if($booking->day == $day && $booking->time == $slot)
+            {
+                array_push($result, $booking);
+            }
+        }
+
+        return $result;
+    }
 }
 
 class Booking extends CI_Model {
