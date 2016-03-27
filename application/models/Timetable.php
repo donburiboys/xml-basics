@@ -70,7 +70,39 @@ class Timetable extends CI_Model {
     public function getBlocks() {
         return $this->blocks;
     }
-    
+
+    public function getTheDay()
+    {
+        $days = array(
+            'Monday' => 'Monday',
+            'Tuesday' => 'Tuesday',
+            'Wednesday' => 'Wednesday',
+            'Thursday' => 'Thursday',
+            'Friday' => 'Friday'
+        );
+
+        return $days;
+    }
+
+    public function getTheTimetable()
+    {
+        $timetable = array (
+            '8:30-10:20' => '8:30-10:20',
+            '9:30-10:20' => '9:30-10:20',
+            '9:30-11:20' => '9:30-11:20',
+            '10:30-11:20' => '10:30-11:20',
+            '11:30-12:20' => '11:30-12:20',
+            '12:30-1:20' => '12:30-1:20',
+            '12:30-2:20' => '12:30-2:20',
+            '1:30-2:20' => '1:30-2:20',
+            '1:30-5:20' => '1:30-5:20',
+            '2:30-3:20' => '2:30-3:20',
+            '3:30-5:20' => '3:30-5:20'
+        );
+
+        return $timetable;
+    }
+
     
 }
 
